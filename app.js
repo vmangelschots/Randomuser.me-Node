@@ -24,7 +24,7 @@ app.set('views', path.join(__dirname, '.viewsMin'));
 app.set('view engine', 'ejs');
 
 app.use(favicon(path.join(__dirname, 'public', 'img', 'favicon.png')));
-app.set('port', settings.port);
+app.set('port', process.env.PORT);
 //app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
